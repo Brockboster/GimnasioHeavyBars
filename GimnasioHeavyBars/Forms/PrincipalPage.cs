@@ -1,0 +1,103 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace GimnasioHeavyBars.Forms
+{
+    public partial class PrincipalPage : Form
+    {
+        //Creamos un contador para estableces valores y poder cerrar los formularios mas antiguos 
+        private int formCount = 0; // Inicializa el contador de formularios abiertos
+        private int maxFormCount = 3;
+        public PrincipalPage()
+        {
+            InitializeComponent();
+            this.KeyPreview = true;
+        }
+
+        //Cierra la aplicacion 
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        //minimiza la aplicacion
+        private void BtnMinimized_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        //Cierra los formularios antiguos para acelerar la aplicacion
+        private void Cerrador()
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (!form.Visible)
+                {
+                    form.Close();
+                    return;
+                }
+            }
+        }
+        //Creamos un contador para establecer un tiempo exacto 
+        private Timer timer;
+        private void PrincipalPage_Load(object sender, EventArgs e)
+        {
+            Fecha.Text = DateTime.Now.ToLongDateString();
+            timer = new Timer();
+            timer.Interval = 60000; // este intervalo se establece en  milisegundos (1 minuto = 60000 ms)
+            timer.Tick += new EventHandler(Timer_Tick);
+            timer.Start();
+            ActualizarFecha();
+        }
+        //actualizamos el tiempo actual
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            ActualizarFecha();
+        }
+        //actualizamos la fecha actual 
+        private void ActualizarFecha()
+        {
+            Fecha1.Text = DateTime.Now.ToString("hh:mm tt");
+        }
+        //se establece y se abre el formualario de los usuarios en el panel visible 
+        private void BtnUsuarios_Click(object sender, EventArgs e)
+        {
+            if (formCount >= maxFormCount)
+            {
+                Cerrador();
+            }
+            FrmUsers Users = new FrmUsers();
+            Users.TopLevel = false;
+            Users.Size = PanelVisible.Size;
+            PanelVisible.Controls.Clear();
+            PanelVisible.Controls.Add(Users);
+            Users.Show();
+        }
+
+        private void BtnMe_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnCoachs_Click(object sender, EventArgs e)
+        {
+            if (formCount >= maxFormCount)
+            {
+                Cerrador();
+            }
+            FrmCoaches Coaches = new FrmCoaches();
+            Coaches.TopLevel = false;
+            Coaches.Size = PanelVisible.Size;
+            PanelVisible.Controls.Clear();
+            PanelVisible.Controls.Add(Coaches);
+            Coaches.Show();
+        }
+    }
+}
