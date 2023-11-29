@@ -20,6 +20,8 @@ namespace Logic.Models
 
         //atributos compuestos 
         public CoachType MyCoachtipe { get; set; }
+         
+
 
         #endregion
 
@@ -27,6 +29,7 @@ namespace Logic.Models
         public Coach()
         {
             MyCoachtipe = new CoachType();
+           
         }
         #endregion
 
@@ -108,6 +111,7 @@ namespace Logic.Models
             return R;
         }
         #endregion
+
         #region Inactivar
         public bool Inactivate()
         {
@@ -237,6 +241,7 @@ namespace Logic.Models
 
         }
         #endregion
+
 
     }
 }

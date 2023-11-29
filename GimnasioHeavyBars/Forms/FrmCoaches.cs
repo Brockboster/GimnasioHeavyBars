@@ -26,14 +26,7 @@ namespace GimnasioHeavyBars.Forms
         }
         #endregion
 
-        #region Evento load 
-        private void FrmCoaches_Load(object sender, EventArgs e)
-        {
-            CoachList();
-            Coachtype();
-
-        }
-        #endregion
+        
 
         #region Limpiador 
         private void Clean()
@@ -438,7 +431,15 @@ namespace GimnasioHeavyBars.Forms
             }
         }
 
+
         #endregion
 
+        #region load
+        private void FrmCoaches_Load(object sender, EventArgs e)
+        {
+            CoachList();
+            Coachtype();
+        }
+        #endregion
     }
 }

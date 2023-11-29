@@ -55,6 +55,23 @@ namespace GimnasioHeavyBars.Forms
             timer.Tick += new EventHandler(Timer_Tick);
             timer.Start();
             ActualizarFecha();
+
+            switch (Globals.MyGlobalUser.MyUserRole.UserRoleID)
+            {
+                case 1:
+                    //Es un admin no se debe hacer bloqueo por el momento
+                    break;
+                case 2:
+                    //Es personal lo cual se registren ciertos datos
+
+                    BtnMe.Visible = false;
+                    break;
+                case 3:
+                    //Es cliente lo cual se registren ciertos datos
+                    BtnUsuarios.Visible = false;
+                    BtnCoachs.Visible = false;
+                    break;
+            }
         }
         //actualizamos el tiempo actual
         private void Timer_Tick(object sender, EventArgs e)
@@ -83,7 +100,38 @@ namespace GimnasioHeavyBars.Forms
 
         private void BtnMe_Click(object sender, EventArgs e)
         {
+            if (formCount >= maxFormCount)
+            {
+                Cerrador();
+            }
+            FrmMe me = new FrmMe();
+            me.TopLevel = false;
+            me.Size = PanelVisible.Size;
+            PanelVisible.Controls.Clear();
+            PanelVisible.Controls.Add(me);
+            me.Show();
+        }
 
+       
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Application.Exit();
+        }
+
+        private void BtnExercise_Click(object sender, EventArgs e)
+        {
+            if (formCount >= maxFormCount)
+            {
+                Cerrador();
+            }
+            FrmExercise exercise = new FrmExercise();
+            exercise.TopLevel = false;
+            exercise.Size = PanelVisible.Size;
+            PanelVisible.Controls.Clear();
+            PanelVisible.Controls.Add(exercise);
+            exercise.Show();
         }
 
         private void BtnCoachs_Click(object sender, EventArgs e)
@@ -98,6 +146,25 @@ namespace GimnasioHeavyBars.Forms
             PanelVisible.Controls.Clear();
             PanelVisible.Controls.Add(Coaches);
             Coaches.Show();
+        }
+
+        private void Btntraining_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnRutine_Click(object sender, EventArgs e)
+        {
+            if (formCount >= maxFormCount)
+            {
+                Cerrador();
+            }
+            FrmRutine schedule = new FrmRutine();
+            schedule.TopLevel = false;
+            schedule.Size = PanelVisible.Size;
+            PanelVisible.Controls.Clear();
+            PanelVisible.Controls.Add(schedule);
+            schedule.Show();
         }
     }
 }

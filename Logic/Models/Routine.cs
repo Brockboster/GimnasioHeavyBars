@@ -11,11 +11,12 @@ namespace Logic.Models
         public int RoutineID { get; set; }
         public string RoutineName { get; set; }
 
-        public string RoutineDifficulty { get; set; }
+
 
         public int RoutineDuration { get; set; }
 
         public string Description { get; set; }
+        public Difficulty Difficulty { get; set; }
 
 
     }

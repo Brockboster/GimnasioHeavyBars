@@ -7,30 +7,28 @@ using System.Threading.Tasks;
 
 namespace Logic.Models
 {
-    public class Membership
+    public class Difficulty
     {
         #region Atributos
-        //Atributos 
-        public int MerbershipID { get; set; }
-        public string MembershipName { get; set; }
-        public bool Active { get; set; }
-        public decimal price { get; set; }
+        public int DifficultyID { get; set; }
+        public string Description { get; set; }
+
         #endregion
 
-        
 
-        #region Lista de membresias 
-
-        //Lista de Membresias 
+        #region Lista de niveles de dificultad
+        //Lista de roles de usuario
         public DataTable List()
         {
             DataTable R = new DataTable();
             Services.Conection MiCnn = new Services.Conection();
-            R = MiCnn.EjecutarSELECT("MembershipList");
+            R = MiCnn.EjecutarSELECT("DifficultyList");
             return R;
         }
-
         #endregion
+
+
+
 
 
     }

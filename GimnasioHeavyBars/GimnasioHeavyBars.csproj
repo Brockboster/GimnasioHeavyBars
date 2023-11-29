@@ -46,23 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\FrmCoaches.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmCoaches.Designer.cs">
       <DependentUpon>FrmCoaches.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmExercise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmExercise.Designer.cs">
+      <DependentUpon>FrmExercise.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMe.Designer.cs">
+      <DependentUpon>FrmMe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmRutine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmRutine.Designer.cs">
+      <DependentUpon>FrmRutine.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmUsers.cs">
       <SubType>Form</SubType>
@@ -82,8 +94,17 @@
     <EmbeddedResource Include="Forms\FrmCoaches.resx">
       <DependentUpon>FrmCoaches.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmExercise.resx">
+      <DependentUpon>FrmExercise.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMe.resx">
+      <DependentUpon>FrmMe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmRutine.resx">
+      <DependentUpon>FrmRutine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmUsers.resx">
       <DependentUpon>FrmUsers.cs</DependentUpon>

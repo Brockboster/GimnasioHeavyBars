@@ -88,7 +88,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1047, 589);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1173, 673);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -98,12 +98,12 @@
             this.tableLayoutPanel2.Controls.Add(this.panel4, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(290, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(416, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.95107F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.04893F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(754, 583);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(754, 667);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // panel4
@@ -114,9 +114,9 @@
             this.panel4.Controls.Add(this.BtnSkipeForm);
             this.panel4.Controls.Add(this.BtnClean);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 509);
+            this.panel4.Location = new System.Drawing.Point(3, 582);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(748, 71);
+            this.panel4.Size = new System.Drawing.Size(748, 82);
             this.panel4.TabIndex = 1;
             // 
             // BtnInactive
@@ -127,7 +127,7 @@
             this.BtnInactive.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnInactive.Location = new System.Drawing.Point(358, 0);
             this.BtnInactive.Name = "BtnInactive";
-            this.BtnInactive.Size = new System.Drawing.Size(156, 71);
+            this.BtnInactive.Size = new System.Drawing.Size(156, 82);
             this.BtnInactive.TabIndex = 23;
             this.BtnInactive.Text = "Inactivar";
             this.BtnInactive.UseVisualStyleBackColor = false;
@@ -141,7 +141,7 @@
             this.btnActivate.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnActivate.Location = new System.Drawing.Point(179, 0);
             this.btnActivate.Name = "btnActivate";
-            this.btnActivate.Size = new System.Drawing.Size(179, 71);
+            this.btnActivate.Size = new System.Drawing.Size(179, 82);
             this.btnActivate.TabIndex = 22;
             this.btnActivate.Text = "Activar";
             this.btnActivate.UseVisualStyleBackColor = false;
@@ -159,7 +159,7 @@
             this.BtnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnDelete.Location = new System.Drawing.Point(0, 0);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(179, 71);
+            this.BtnDelete.Size = new System.Drawing.Size(179, 82);
             this.BtnDelete.TabIndex = 21;
             this.BtnDelete.Text = "Eliminar";
             this.BtnDelete.UseVisualStyleBackColor = false;
@@ -173,7 +173,7 @@
             this.BtnSkipeForm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnSkipeForm.Location = new System.Drawing.Point(467, 0);
             this.BtnSkipeForm.Name = "BtnSkipeForm";
-            this.BtnSkipeForm.Size = new System.Drawing.Size(172, 71);
+            this.BtnSkipeForm.Size = new System.Drawing.Size(172, 82);
             this.BtnSkipeForm.TabIndex = 12;
             this.BtnSkipeForm.Text = "Cerrar  ";
             this.BtnSkipeForm.UseVisualStyleBackColor = false;
@@ -185,7 +185,7 @@
             this.BtnClean.Image = ((System.Drawing.Image)(resources.GetObject("BtnClean.Image")));
             this.BtnClean.Location = new System.Drawing.Point(639, 0);
             this.BtnClean.Name = "BtnClean";
-            this.BtnClean.Size = new System.Drawing.Size(109, 71);
+            this.BtnClean.Size = new System.Drawing.Size(109, 82);
             this.BtnClean.TabIndex = 0;
             this.BtnClean.Text = " ";
             this.BtnClean.UseVisualStyleBackColor = true;
@@ -203,7 +203,7 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.113537F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.88646F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(748, 500);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(748, 573);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // panel3
@@ -215,7 +215,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(742, 24);
+            this.panel3.Size = new System.Drawing.Size(742, 29);
             this.panel3.TabIndex = 0;
             // 
             // CBActive
@@ -271,13 +271,13 @@
             this.CCoachEmail,
             this.CDescription});
             this.DgCoach.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgCoach.Location = new System.Drawing.Point(3, 33);
+            this.DgCoach.Location = new System.Drawing.Point(3, 38);
             this.DgCoach.MultiSelect = false;
             this.DgCoach.Name = "DgCoach";
             this.DgCoach.ReadOnly = true;
             this.DgCoach.RowHeadersVisible = false;
             this.DgCoach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgCoach.Size = new System.Drawing.Size(742, 464);
+            this.DgCoach.Size = new System.Drawing.Size(742, 532);
             this.DgCoach.TabIndex = 1;
             this.DgCoach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgCoach_CellClick);
             // 
@@ -332,7 +332,7 @@
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.8256F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.1744F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(281, 583);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(407, 667);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // panel2
@@ -340,9 +340,9 @@
             this.panel2.Controls.Add(this.BtnEdit);
             this.panel2.Controls.Add(this.BtnAdd);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 509);
+            this.panel2.Location = new System.Drawing.Point(3, 582);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(275, 71);
+            this.panel2.Size = new System.Drawing.Size(401, 82);
             this.panel2.TabIndex = 1;
             // 
             // BtnEdit
@@ -353,7 +353,7 @@
             this.BtnEdit.ForeColor = System.Drawing.Color.SeaShell;
             this.BtnEdit.Location = new System.Drawing.Point(172, 0);
             this.BtnEdit.Name = "BtnEdit";
-            this.BtnEdit.Size = new System.Drawing.Size(182, 71);
+            this.BtnEdit.Size = new System.Drawing.Size(182, 82);
             this.BtnEdit.TabIndex = 15;
             this.BtnEdit.Text = "Modificar";
             this.BtnEdit.UseVisualStyleBackColor = false;
@@ -367,7 +367,7 @@
             this.BtnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnAdd.Location = new System.Drawing.Point(0, 0);
             this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(172, 71);
+            this.BtnAdd.Size = new System.Drawing.Size(172, 82);
             this.BtnAdd.TabIndex = 14;
             this.BtnAdd.Text = "Agregar";
             this.BtnAdd.UseVisualStyleBackColor = false;
@@ -379,7 +379,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(275, 500);
+            this.panel1.Size = new System.Drawing.Size(401, 573);
             this.panel1.TabIndex = 2;
             // 
             // groupBox1
@@ -398,7 +398,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(275, 500);
+            this.groupBox1.Size = new System.Drawing.Size(401, 573);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalles del Entrenador";
@@ -502,13 +502,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 589);
+            this.ClientSize = new System.Drawing.Size(1173, 673);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCoaches";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCoaches";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmCoaches_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

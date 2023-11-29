@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Logic.Models;
 
 namespace GimnasioHeavyBars.Forms
 {
@@ -27,15 +28,7 @@ namespace GimnasioHeavyBars.Forms
         }
         #endregion
 
-        #region Load 
-        //Evento load para cargar algunas condicionales 
-        private void FrmUsers_Load(object sender, EventArgs e)
-        {
-            UsersList();
-            UsersRole();
-            Merbership();
-        }
-        #endregion
+        
 
         #region Botones 
         //Boton para Cerrar el formulario
@@ -60,8 +53,36 @@ namespace GimnasioHeavyBars.Forms
                 MyUser.UserEmail = txtEmail.Text.Trim();
                 MyUser.UserPassword = TxtPassword.Text.Trim();
                 MyUser.MyUserRole.UserRoleID = Convert.ToInt32(CbUserRole.SelectedValue);
-                MyUser.membership.DueDate = DateTime.Now;
+
+                MyUser.question.QuestionID = Convert.ToInt32(CbQuestion.SelectedValue);
+                MyUser.answer = txtAnswer.Text.Trim();
+
+
                 MyUser.membership.MerbershipID = Convert.ToInt32(CbMembership.SelectedValue);
+                MyUser.DateStart = DateTime.Now;
+                MyUser.RegisterDay = DateTime.Now;
+
+                switch (MyUser.membership.MerbershipID)
+                {
+                    case 1:
+                        MyUser.DateFinal = MyUser.DateStart.AddDays(1);
+                        break;
+                    case 2:
+                        MyUser.DateFinal = MyUser.DateStart.AddDays(5);
+                        break;
+                    case 3:
+                        MyUser.DateFinal = MyUser.DateStart.AddMonths(1);
+                        break;
+                    case 4:
+                        MyUser.DateFinal = MyUser.DateStart.AddMonths(3);
+                        break;
+                    case 5:
+                        MyUser.DateFinal = MyUser.DateStart.AddYears(1);
+                        break;
+                    default:
+                        MessageBox.Show("Error de ID");
+                        break;
+                }
 
 
 
@@ -173,8 +194,7 @@ namespace GimnasioHeavyBars.Forms
                     MyUser.UserEmail = txtEmail.Text.Trim();
                     MyUser.UserPassword = TxtPassword.Text.Trim();
                     MyUser.MyUserRole.UserRoleID = Convert.ToInt32(CbUserRole.SelectedValue);
-                    MyUser.membership.DueDate = DateTime.Now;
-                    MyUser.membership.MerbershipID = Convert.ToInt32(CbMembership.SelectedValue);
+
 
                     Emailok = MyUser.ConsultUserEmail();
                     Phoneok = MyUser.ConsultPhonenumber();
@@ -188,7 +208,7 @@ namespace GimnasioHeavyBars.Forms
 
                             if (MyUser.Update())
                             {
-                                MessageBox.Show("El Entrenador " + MyUser.UserName + "ha sido modificado correctamente", ":)", MessageBoxButtons.OK);
+                                MessageBox.Show("El usuario " + MyUser.UserName + "ha sido modificado correctamente", ":)", MessageBoxButtons.OK);
 
                                 Clean();
                                 UsersList();
@@ -288,10 +308,6 @@ namespace GimnasioHeavyBars.Forms
                 MessageBox.Show("Debes de seleccionar un usuario de la lista para poder inactivarlo.", "!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-
-
-
         #endregion
 
         #region Cargar Listas
@@ -337,6 +353,25 @@ namespace GimnasioHeavyBars.Forms
 
             }
         }
+
+        private void Question()
+        {
+            Logic.Models.Question question = new Logic.Models.Question();
+
+            DataTable dt = new DataTable();
+            dt = question.List();
+
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                CbQuestion.ValueMember = "QuestionID";
+                CbQuestion.DisplayMember = "QuestionName";
+                CbQuestion.DataSource = dt;
+                CbQuestion.SelectedIndex = -1;
+
+            }
+
+
+        }
         private void Merbership()
         {
             Logic.Models.Membership memberships = new Logic.Models.Membership();
@@ -358,6 +393,7 @@ namespace GimnasioHeavyBars.Forms
         #endregion
 
         #region Check  
+        //Chequeamos el estado y mediante eso se puede ver las lista de activos o inactivos
         private void CBActive_CheckedChanged(object sender, EventArgs e)
         {
             CheckStatus();
@@ -392,7 +428,12 @@ namespace GimnasioHeavyBars.Forms
             TxtUserID.Clear();
             TxtUserName.Clear();
             TxtWeigth.Clear();
+            txtAnswer.Clear();
+            txtDatePrice.Clear();
+            txtRegisterDay.Clear();
+            TxtendMembership.Clear();
             CbMembership.SelectedIndex = -1;
+            CbQuestion.SelectedIndex = -1;
             CbUserRole.SelectedIndex = -1;
 
         }
@@ -402,9 +443,9 @@ namespace GimnasioHeavyBars.Forms
         private bool Validate(bool SkipPassword = false)
         {
             bool R = false;
-            if (!string.IsNullOrEmpty(TxtUserName.Text.Trim()) && !string.IsNullOrEmpty(TxtHeight.Text.Trim()) &&
+            if (!string.IsNullOrEmpty(TxtUserName.Text.Trim()) && !string.IsNullOrEmpty(TxtHeight.Text.Trim()) && !string.IsNullOrEmpty(txtAnswer.Text.Trim()) &&
               !string.IsNullOrEmpty(TxtPhoneNumber.Text.Trim()) && !string.IsNullOrEmpty(txtEmail.Text.Trim()) && !string.IsNullOrEmpty(TxtWeigth.Text.Trim())
-                    && CbUserRole.SelectedIndex > -1 && CbMembership.SelectedIndex > -1)
+                    && CbUserRole.SelectedIndex > -1 && CbMembership.SelectedIndex > -1 && CbQuestion.SelectedIndex > -1)
             {
                 if (SkipPassword)
                 {
@@ -432,6 +473,12 @@ namespace GimnasioHeavyBars.Forms
                 {
                     MessageBox.Show("Debes digitar un nombre para el usuario", "Error de Validacion ", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                     TxtUserName.Focus();
+                    return false;
+                }
+                if (string.IsNullOrEmpty(txtAnswer.Text.Trim()))
+                {
+                    MessageBox.Show("Debes digitar una respuesta para la pregunta", "Error de Validacion ", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    txtAnswer.Focus();
                     return false;
                 }
                 if (string.IsNullOrEmpty(txtEmail.Text.Trim()))
@@ -470,6 +517,12 @@ namespace GimnasioHeavyBars.Forms
                     CbMembership.Focus();
                     return false;
                 }
+                if (CbQuestion.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Debes seleccionar una Pregunta para el usuario", "Error de Validacion ", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    CbQuestion.Focus();
+                    return false;
+                }
 
             }
             return R;
@@ -479,36 +532,28 @@ namespace GimnasioHeavyBars.Forms
         }
         #endregion
 
-        #region keypress
+        #region Validaciones
+        //validamos la inserccion correcta de datos en los campos respectivos
         private void TxtPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-                MessageBox.Show("Este Campo Solo Acepta Numeros.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-            }
         }
 
         private void TxtWeigth_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-                MessageBox.Show("Este Campo Solo Acepta Numeros.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-            }
         }
 
         private void TxtHeight_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-                MessageBox.Show("Este Campo Solo Acepta Numeros.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-            }
         }
+        private void TxtUserName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+
 
         #endregion
 
@@ -542,10 +587,34 @@ namespace GimnasioHeavyBars.Forms
                     TxtPhoneNumber.Text = Convert.ToString(MyUser.PhoneNumber);
                     CbMembership.SelectedValue = MyUser.membership.MerbershipID;
                     CbUserRole.SelectedValue = MyUser.MyUserRole.UserRoleID;
+                    txtAnswer.Text = MyUser.answer;
+                    CbQuestion.SelectedValue = MyUser.question.QuestionID;
+                    TxtendMembership.Text = Convert.ToString(MyUser.DateFinal);
+                    txtRegisterDay.Text = Convert.ToString(MyUser.RegisterDay);
+                    txtDatePrice.Text = Convert.ToString(MyUser.DateStart);
+
                 }
             }
         }
 
+
+
         #endregion
+
+        #region Buscador 
+        //Con este devolvemos al usuario buscado
+        private void TxtSearch_TextChanged(object sender, EventArgs e)
+        {
+            UsersList();
+        }
+        #endregion
+
+        private void FrmUsers_Load(object sender, EventArgs e)
+        {
+            UsersList();
+            UsersRole();
+            Merbership();
+            Question();
+        }
     }
 }

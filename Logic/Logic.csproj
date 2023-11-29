@@ -45,10 +45,12 @@
     <Compile Include="Models\Coach.cs" />
     <Compile Include="Models\CoachType.cs" />
     <Compile Include="Models\Crypto.cs" />
-    <Compile Include="Models\DueDate.cs" />
+    <Compile Include="Models\Difficulty.cs" />
     <Compile Include="Models\Exercise.cs" />
     <Compile Include="Models\Membership.cs" />
+    <Compile Include="Models\Question.cs" />
     <Compile Include="Models\Routine.cs" />
+    <Compile Include="Models\RoutineDetail.cs" />
     <Compile Include="Models\Services\Conection.cs" />
     <Compile Include="Models\Training.cs" />
     <Compile Include="Models\TrainingType.cs" />
