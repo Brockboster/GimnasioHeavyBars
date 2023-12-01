@@ -33,6 +33,17 @@ namespace Logic.Models
         }
         #endregion
 
+        #region Lista de entrenadores
+
+        public DataTable List()
+        {
+            DataTable R = new DataTable();
+            Services.Conection MiCnn = new Services.Conection();
+            R = MiCnn.EjecutarSELECT("Coachlist");
+            return R;
+        }
+        #endregion
+
         #region agregar 
         public bool Add()
         {

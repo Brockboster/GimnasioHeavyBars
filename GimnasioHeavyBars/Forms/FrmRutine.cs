@@ -108,7 +108,8 @@ namespace GimnasioHeavyBars.Forms
             TxtRutineID.Clear();
             TxtRutineName.Clear();
             CbDifficulty.SelectedIndex = -1;
-            TxtTime.Value = 0;
+            Txthoras.Value = 0;
+            Txtminutos.Value = 0;
             TxtDescription.Clear();
             DgExercise.ClearSelection();
             DgExerciseList.ClearSelection();
@@ -204,7 +205,7 @@ namespace GimnasioHeavyBars.Forms
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             //Funciona para agregar la rutina con los diferentes datos 
-            if (!string.IsNullOrEmpty(TxtRutineName.Text.Trim()) && !string.IsNullOrEmpty(TxtExerciseID.Text.Trim()) && !string.IsNullOrEmpty(TxtExerciseName.Text.Trim()) && CbDifficulty.SelectedIndex > -1 && TxtTime.Value > 0 && NMReps.Value > 0 && NmSets.Value > 0)
+            if (!string.IsNullOrEmpty(TxtRutineName.Text.Trim()))
             {
                 MyRoutine = new Logic.Models.Routine();
                 MyRoutine.RoutineName = TxtRutineName.Text.Trim();
@@ -242,6 +243,129 @@ namespace GimnasioHeavyBars.Forms
         {
             ExercisesList();
             Difficulty();
+        }
+
+        private void DgExerciseList_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (DgExerciseList.SelectedRows.Count == 1)
+            {
+
+                DataGridViewRow Row = DgExerciseList.SelectedRows[0];
+
+
+                int ID = Convert.ToInt32(Row.Cells["CExerciseID"].Value);
+
+                MyExercise = new Logic.Models.Exercise();
+
+
+                MyExercise.ExerciseID = ID;
+
+
+
+                MyExercise = MyExercise.ExerciseSearchID();
+
+                if (MyExercise != null && MyExercise.ExerciseID > 0)
+                {
+                    TxtExerciseID.Text = Convert.ToString(MyExercise.ExerciseID);
+                    TxtExerciseName.Text = MyExercise.NameExercise;
+
+
+
+                }
+            }
+        }
+
+        private void BtnaddExercise_Click_1(object sender, EventArgs e)
+        {
+            //Agregamos los ejercicios al datagridview para poder crear la rutina
+            {
+                // Verificar si se ha seleccionado un ejercicio en DgExerciseList
+                if (DgExerciseList.SelectedRows.Count > 0 && !string.IsNullOrEmpty(TxtExerciseID.Text.Trim()) &&
+               !string.IsNullOrEmpty(TxtExerciseName.Text.Trim()))
+                {
+                    // Obtener la información del ejercicio seleccionado en DgExerciseList
+                    DataGridViewRow ejercicioSeleccionado = DgExerciseList.SelectedRows[0];
+                    int exerciseID = Convert.ToInt32(ejercicioSeleccionado.Cells["CExerciseID"].Value);
+                    string exerciseName = ejercicioSeleccionado.Cells["CNameExercise"].Value.ToString();
+
+                    // Obtener las repeticiones y series del ejercicio desde los NumericUpDown
+                    int reps = Convert.ToInt32(NMReps.Value);
+                    int sets = Convert.ToInt32(NmSets.Value);
+
+                    // Verificar si el ejercicio ya existe en DgExercise
+                    bool ejercicioExistente = false;
+                    foreach (DataGridViewRow filaEjercicio in DgExercise.Rows)
+                    {
+                        if ((int)filaEjercicio.Cells["ExerciseID"].Value == exerciseID)
+                        {
+                            // Ejercicio ya existe, actualizar repeticiones y series
+                            int repsExistente = (int)filaEjercicio.Cells["Reps"].Value;
+                            int setsExistente = (int)filaEjercicio.Cells["Sets"].Value;
+
+                            filaEjercicio.Cells["Reps"].Value = repsExistente + reps;
+                            filaEjercicio.Cells["Sets"].Value = setsExistente + sets;
+
+                            ejercicioExistente = true;
+                            break;
+                        }
+                    }
+
+                    if (!ejercicioExistente)
+                    {
+                        // Ejercicio no existe, agregar nueva fila a DgExercise
+                        DgExercise.Rows.Add(exerciseID, exerciseName, reps, sets);
+                    }
+
+                    // Limpiar los controles después de agregar el ejercicio
+                    cleancontrolers();
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, seleccione un ejercicio de la lista.");
+                }
+            }
+        }
+
+        private void BtnAdd_Click_1(object sender, EventArgs e)
+        {
+            //Funciona para agregar la rutina con los diferentes datos 
+            if (!string.IsNullOrEmpty(TxtRutineName.Text.Trim()) && (CbDifficulty.SelectedIndex > -1) && (Txtminutos.Value > -1))
+            {
+                int horas = (int)Txthoras.Value;
+                int minutos = (int)Txtminutos.Value;
+
+                int duraciontotalenminutos = horas * 60 + minutos;
+
+                MyRoutine = new Logic.Models.Routine();
+                MyRoutine.RoutineName = TxtRutineName.Text.Trim();
+                MyRoutine.Description = TxtDescription.Text.Trim();
+                MyRoutine.Difficulty.DifficultyID = Convert.ToInt32(CbDifficulty.SelectedValue);
+                MyRoutine.RoutineDuration = duraciontotalenminutos;
+                foreach (DataGridViewRow row in DgExercise.Rows)
+                {
+                    RoutineDetail newdetail = new RoutineDetail();
+
+                    newdetail.Sets = Convert.ToInt32(row.Cells["Sets"].Value);
+                    newdetail.Reps = Convert.ToInt32(row.Cells["Reps"].Value);
+                    newdetail.MyExercise.ExerciseID = Convert.ToInt32(row.Cells["ExerciseID"].Value);
+                    MyRoutine.MyRoutineDetail.Add(newdetail);
+                }
+                if (MyRoutine.Add())
+                {
+                    MessageBox.Show("Rutina guardada correctamente", ":)", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    MessageBox.Show("la rutina no se guardado de forma correcta!", "Error de validacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("Faltan algunos  Datos para guardar la rutina", ":Faltante de datos", MessageBoxButtons.OK);
+            }
         }
     }
 }

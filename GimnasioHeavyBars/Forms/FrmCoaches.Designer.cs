@@ -427,6 +427,7 @@
             this.TxtPhoneNumber.Size = new System.Drawing.Size(348, 27);
             this.TxtPhoneNumber.TabIndex = 21;
             this.TxtPhoneNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPhoneNumber_KeyPress);
             // 
             // label6
             // 

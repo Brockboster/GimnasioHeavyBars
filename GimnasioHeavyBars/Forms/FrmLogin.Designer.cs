@@ -42,7 +42,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(544, 192);
+            this.pictureBox1.Location = new System.Drawing.Point(427, 154);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 40);
             this.pictureBox1.TabIndex = 20;
@@ -52,7 +52,7 @@
             // BtnCancel
             // 
             this.BtnCancel.BackColor = System.Drawing.Color.Red;
-            this.BtnCancel.Location = new System.Drawing.Point(421, 419);
+            this.BtnCancel.Location = new System.Drawing.Point(304, 381);
             this.BtnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(173, 45);
@@ -64,7 +64,7 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnLogin.Location = new System.Drawing.Point(207, 419);
+            this.btnLogin.Location = new System.Drawing.Point(90, 381);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(161, 45);
@@ -75,7 +75,7 @@
             // 
             // BtnIngresoDirecto
             // 
-            this.BtnIngresoDirecto.Location = new System.Drawing.Point(207, 298);
+            this.BtnIngresoDirecto.Location = new System.Drawing.Point(90, 260);
             this.BtnIngresoDirecto.Margin = new System.Windows.Forms.Padding(4);
             this.BtnIngresoDirecto.Name = "BtnIngresoDirecto";
             this.BtnIngresoDirecto.Size = new System.Drawing.Size(206, 45);
@@ -89,7 +89,7 @@
             // 
             this.TxtPassword.Font = new System.Drawing.Font("Tahoma", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.TxtPassword.Location = new System.Drawing.Point(207, 192);
+            this.TxtPassword.Location = new System.Drawing.Point(90, 154);
             this.TxtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(340, 40);
@@ -102,7 +102,7 @@
             // 
             this.TxtUserName.Font = new System.Drawing.Font("Tahoma", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtUserName.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.TxtUserName.Location = new System.Drawing.Point(207, 74);
+            this.TxtUserName.Location = new System.Drawing.Point(90, 36);
             this.TxtUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TxtUserName.Name = "TxtUserName";
             this.TxtUserName.Size = new System.Drawing.Size(387, 40);
@@ -116,7 +116,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GimnasioHeavyBars.Properties.Resources.fondo1;
-            this.ClientSize = new System.Drawing.Size(806, 534);
+            this.ClientSize = new System.Drawing.Size(537, 481);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.btnLogin);

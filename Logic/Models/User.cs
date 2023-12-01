@@ -54,6 +54,18 @@ namespace Logic.Models
 
         #endregion
 
+        #region Lista de   usuarios 
+        //Lista de roles de usuario
+        public DataTable List()
+        {
+            DataTable R = new DataTable();
+            Services.Conection MiCnn = new Services.Conection();
+            R = MiCnn.EjecutarSELECT("UsersListClient");
+            return R;
+        }
+        #endregion
+
+
         #region Lista de activos y inactivos 
         // Lista los usuarios activos y inactivos  
         public DataTable ActiveList(string pFiltroBusqueda)

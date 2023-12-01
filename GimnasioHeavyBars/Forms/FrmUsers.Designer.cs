@@ -255,6 +255,7 @@
             this.CBActive.Text = "Activo";
             this.CBActive.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CBActive.UseVisualStyleBackColor = true;
+            this.CBActive.CheckedChanged += new System.EventHandler(this.CBActive_CheckedChanged);
             // 
             // TxtSearch
             // 
@@ -508,6 +509,7 @@
             this.TxtPhoneNumber.Size = new System.Drawing.Size(251, 27);
             this.TxtPhoneNumber.TabIndex = 21;
             this.TxtPhoneNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPhoneNumber_KeyPress);
             // 
             // TxtWeigth
             // 
@@ -516,6 +518,7 @@
             this.TxtWeigth.Size = new System.Drawing.Size(261, 27);
             this.TxtWeigth.TabIndex = 20;
             this.TxtWeigth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtWeigth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtWeigth_KeyPress);
             // 
             // TxtHeight
             // 
@@ -524,6 +527,7 @@
             this.TxtHeight.Size = new System.Drawing.Size(261, 27);
             this.TxtHeight.TabIndex = 19;
             this.TxtHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtHeight_KeyPress);
             // 
             // label7
             // 
@@ -592,6 +596,7 @@
             this.TxtUserName.Size = new System.Drawing.Size(252, 27);
             this.TxtUserName.TabIndex = 12;
             this.TxtUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtUserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUserName_KeyPress);
             // 
             // label18
             // 

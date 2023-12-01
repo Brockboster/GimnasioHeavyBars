@@ -10,6 +10,12 @@ namespace Logic.Models
     {
         public int Reps { get; set; }
         public int Sets { get; set; }
+        public Exercise MyExercise { get; set; }
+
+        public RoutineDetail()
+        {
+            MyExercise = new Exercise();
+        }
 
 
     }

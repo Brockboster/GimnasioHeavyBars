@@ -70,6 +70,9 @@ namespace GimnasioHeavyBars.Forms
                     //Es cliente lo cual se registren ciertos datos
                     BtnUsuarios.Visible = false;
                     BtnCoachs.Visible = false;
+                    BtnExercise.Visible = false;
+                    BtnRutine.Visible = false;
+
                     break;
             }
         }
@@ -150,7 +153,16 @@ namespace GimnasioHeavyBars.Forms
 
         private void Btntraining_Click(object sender, EventArgs e)
         {
-
+            if (formCount >= maxFormCount)
+            {
+                Cerrador();
+            }
+            Frmtraining training = new Frmtraining();
+            training.TopLevel = false;
+            training.Size = PanelVisible.Size;
+            PanelVisible.Controls.Clear();
+            PanelVisible.Controls.Add(training);
+            training.Show();
         }
 
         private void BtnRutine_Click(object sender, EventArgs e)
@@ -165,6 +177,20 @@ namespace GimnasioHeavyBars.Forms
             PanelVisible.Controls.Clear();
             PanelVisible.Controls.Add(schedule);
             schedule.Show();
+        }
+
+        private void BtnEntrenamiento_Click(object sender, EventArgs e)
+        {
+            if (formCount >= maxFormCount)
+            {
+                Cerrador();
+            }
+            FrmMyTrainings  MyTrainings = new FrmMyTrainings();
+            MyTrainings.TopLevel = false;
+            MyTrainings.Size = PanelVisible.Size;
+            PanelVisible.Controls.Clear();
+            PanelVisible.Controls.Add(MyTrainings);
+            MyTrainings.Show();
         }
     }
 }

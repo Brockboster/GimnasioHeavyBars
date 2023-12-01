@@ -117,27 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAA6xJREFUaEPtmLmvTGEYxse+BwURjQa1CEJQklBI1CokEiGxNOgIf4Ke4v4HNERC
-        aIhEiMTWKGyJpUBj5/nFecZ7z5xt5h4zt/ie5JeZe877ve/zrXPO7SQlJSUlJSX1akoJk1IYmyamZ0wV
-        ZeKe42gzsk7ZNBQJo/PE4gy+l3XMeYbSGYowerHYHLFRHBUXxC3xTLwRHzL4zjXuXRTEbhJzhVWUuzXl
-        k88Q2wWGX4rfA0JbOkQucqLWOxKXynxxSDwRGPiVfZov4rv4KbgX4Rr3iIltnOOpOCyogWLdgcQIOAHr
-        d794IWJR+CauiLPidnatCmLOCdrQ1tedkxrU8p7BQ9+z4dMCrRF3hIu40H1xTCwRy8UNEY0U4XvE0oa2
-        5CCX7zuGmtRGeCk7BHpEoINPCKadhCwBJ94p3MGV4rWIMVU4hja0ReTaITyDjqH2SYGir1J5ySwSlwRJ
-        PM0U3COYTk8pp8g9EeOa4Fja+iRyTmp4QBx3WeAJle4Lj+gq4U36NfscE5zniASz/n7tnBKxUD+4DTkQ
-        OW2OWtTkvj3gabVA9tqVL2wQ7wQNfghOjH0CMX3EeaT4cXouiG2ydPK4DTnIhchNDS+VvQIPeCEWb3hE
-        3U44eIv4JJz4lYjBjvMobRPRSB1Fm9ttyYWc24OF8IAXx+MRr8ieOuvEZ+Eij8QKgbo9zeS/2VzEepOX
-        QVEb5TN2xG29Uctq4QVPxNIer3ju6ppw0rtioUBFG8ZJz4toogqWwEdB8aIOkAvlO4DsAU94c1s8d5Xv
-        gHd8UcKmHfCoPxTrxQKxS7wXXKcj/XQAT6UdYDpYWx6dx2KiS8i5Ngs0M/s8KLjOrLhtkyWEJ+cdt4TK
-        NjFn8aCb2OZZNssEp8tsgbYK7tHObes2cfyhLNzEMfitIHiix6iv7RbIM3BGcN2/A1XHKLXjMYq3OKjj
-        5Att/ZB5FljzB8RacVp42biNl0+THzK8oR7zVtwwbT1KuCPxb8c2fZTAS+2jhMX0eQrbeJjDMEuAe+Ry
-        DG3iwxw5/dTrGOLxgKKvWhFogzzS+ikRMx7RB+K4WCp4NL4uHMNnEb73Xx+nLaY0ngpVLzRXBS8pk+aF
-        JooE7kjdKyUbzsvEo2m8hMpeKcnZ6itlFCPANHokeAHn7Oal3rMyCEN5qY8qSu5/qxwRdOim4AU9/28V
-        ro3s3yp5UaRqilm//Dhx9AHfyzah8wzFeJHcGUYPqk4L7jlupKbrhLEikpKSkpKSkv6p0/kDx7QkG4Op
-        EFQAAAAASUVORK5CYII=
-</value>
-  </data>
+  <metadata name="CTrainingID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="CRoutineName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="CDate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="CRoutineDuration.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="CNameExercise.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="CSets.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="CReps.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

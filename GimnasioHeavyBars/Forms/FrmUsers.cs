@@ -541,16 +541,30 @@ namespace GimnasioHeavyBars.Forms
 
         private void TxtWeigth_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Este Campo Solo Acepta Numeros.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
+            }
         }
 
         private void TxtHeight_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Este Campo Solo Acepta Numeros.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
+            }
         }
         private void TxtUserName_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Este Campo Solo Acepta Letras.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
 

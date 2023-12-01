@@ -35,7 +35,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.CbDifficulty = new System.Windows.Forms.ComboBox();
-            this.TxtTime = new System.Windows.Forms.NumericUpDown();
             this.TxtDescription = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -66,6 +65,7 @@
             this.BtnaddExercise = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.BtnAdd = new System.Windows.Forms.Button();
+            this.BtnClean = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.DgExercise = new System.Windows.Forms.DataGridView();
             this.ExerciseID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,13 +74,13 @@
             this.Sets = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnDelete = new System.Windows.Forms.Button();
-            this.BtnClean = new System.Windows.Forms.Button();
+            this.Txthoras = new System.Windows.Forms.NumericUpDown();
+            this.Txtminutos = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtTime)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgExerciseList)).BeginInit();
             this.panel6.SuspendLayout();
@@ -94,13 +94,15 @@
             this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgExercise)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Txthoras)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Txtminutos)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 580F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 478F));
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 1, 1);
@@ -111,7 +113,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.18519F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.81481F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1319, 753);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1440, 811);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // panel1
@@ -120,7 +122,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(733, 635);
+            this.panel1.Size = new System.Drawing.Size(956, 684);
             this.panel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -135,10 +137,10 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 323F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 236F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 145F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(733, 635);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(956, 684);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // panel5
@@ -147,13 +149,14 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(3, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(727, 161);
+            this.panel5.Size = new System.Drawing.Size(950, 297);
             this.panel5.TabIndex = 0;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.Txtminutos);
+            this.groupBox1.Controls.Add(this.Txthoras);
             this.groupBox1.Controls.Add(this.CbDifficulty);
-            this.groupBox1.Controls.Add(this.TxtTime);
             this.groupBox1.Controls.Add(this.TxtDescription);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -166,7 +169,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(727, 161);
+            this.groupBox1.Size = new System.Drawing.Size(950, 297);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalles de la rutina";
@@ -179,15 +182,6 @@
             this.CbDifficulty.Name = "CbDifficulty";
             this.CbDifficulty.Size = new System.Drawing.Size(262, 27);
             this.CbDifficulty.TabIndex = 25;
-            // 
-            // TxtTime
-            // 
-            this.TxtTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTime.Location = new System.Drawing.Point(652, 67);
-            this.TxtTime.Name = "TxtTime";
-            this.TxtTime.Size = new System.Drawing.Size(92, 31);
-            this.TxtTime.TabIndex = 23;
-            this.TxtTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtDescription
             // 
@@ -275,12 +269,12 @@
             this.tableLayoutPanel3.Controls.Add(this.DgExerciseList, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.panel6, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 170);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 306);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.8265F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.1735F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(727, 317);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.17391F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.82609F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(950, 230);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // DgExerciseList
@@ -293,13 +287,14 @@
             this.CExerciseID,
             this.CNameExercise});
             this.DgExerciseList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgExerciseList.Location = new System.Drawing.Point(3, 50);
+            this.DgExerciseList.Location = new System.Drawing.Point(3, 54);
             this.DgExerciseList.Name = "DgExerciseList";
             this.DgExerciseList.ReadOnly = true;
             this.DgExerciseList.RowHeadersVisible = false;
             this.DgExerciseList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgExerciseList.Size = new System.Drawing.Size(721, 264);
+            this.DgExerciseList.Size = new System.Drawing.Size(944, 173);
             this.DgExerciseList.TabIndex = 5;
+            this.DgExerciseList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgExerciseList_CellClick_1);
             // 
             // CExerciseID
             // 
@@ -325,7 +320,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(3, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(721, 41);
+            this.panel6.Size = new System.Drawing.Size(944, 45);
             this.panel6.TabIndex = 4;
             // 
             // TxtSearch
@@ -360,11 +355,11 @@
             this.tableLayoutPanel4.Controls.Add(this.groupBox3, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.groupBox2, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 493);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 542);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(727, 139);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(950, 139);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // groupBox3
@@ -375,9 +370,9 @@
             this.groupBox3.Controls.Add(this.TxtExerciseID);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(349, 3);
+            this.groupBox3.Location = new System.Drawing.Point(456, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(375, 133);
+            this.groupBox3.Size = new System.Drawing.Size(491, 133);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos del Ejercicio";
@@ -431,7 +426,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(340, 133);
+            this.groupBox2.Size = new System.Drawing.Size(447, 133);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cantidades";
@@ -478,9 +473,9 @@
             // 
             this.panel3.Controls.Add(this.BtnaddExercise);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 644);
+            this.panel3.Location = new System.Drawing.Point(3, 693);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(733, 106);
+            this.panel3.Size = new System.Drawing.Size(956, 115);
             this.panel3.TabIndex = 2;
             // 
             // BtnaddExercise
@@ -491,19 +486,20 @@
             this.BtnaddExercise.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnaddExercise.Location = new System.Drawing.Point(0, 0);
             this.BtnaddExercise.Name = "BtnaddExercise";
-            this.BtnaddExercise.Size = new System.Drawing.Size(231, 106);
+            this.BtnaddExercise.Size = new System.Drawing.Size(231, 115);
             this.BtnaddExercise.TabIndex = 16;
             this.BtnaddExercise.Text = "Agregar Ejercicio";
             this.BtnaddExercise.UseVisualStyleBackColor = false;
+            this.BtnaddExercise.Click += new System.EventHandler(this.BtnaddExercise_Click_1);
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.BtnAdd);
             this.panel4.Controls.Add(this.BtnClean);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(742, 644);
+            this.panel4.Location = new System.Drawing.Point(965, 693);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(574, 106);
+            this.panel4.Size = new System.Drawing.Size(472, 115);
             this.panel4.TabIndex = 3;
             // 
             // BtnAdd
@@ -514,10 +510,23 @@
             this.BtnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnAdd.Location = new System.Drawing.Point(0, 0);
             this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(172, 106);
+            this.BtnAdd.Size = new System.Drawing.Size(172, 115);
             this.BtnAdd.TabIndex = 15;
             this.BtnAdd.Text = "Agregar";
             this.BtnAdd.UseVisualStyleBackColor = false;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click_1);
+            // 
+            // BtnClean
+            // 
+            this.BtnClean.Dock = System.Windows.Forms.DockStyle.Right;
+            this.BtnClean.Image = ((System.Drawing.Image)(resources.GetObject("BtnClean.Image")));
+            this.BtnClean.Location = new System.Drawing.Point(363, 0);
+            this.BtnClean.Name = "BtnClean";
+            this.BtnClean.Size = new System.Drawing.Size(109, 115);
+            this.BtnClean.TabIndex = 1;
+            this.BtnClean.Text = " ";
+            this.BtnClean.UseVisualStyleBackColor = true;
+            this.BtnClean.Click += new System.EventHandler(this.BtnClean_Click);
             // 
             // tableLayoutPanel5
             // 
@@ -526,12 +535,12 @@
             this.tableLayoutPanel5.Controls.Add(this.DgExercise, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.panel2, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(742, 3);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(965, 3);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.03984F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.960159F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(574, 635);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(472, 684);
             this.tableLayoutPanel5.TabIndex = 4;
             // 
             // DgExercise
@@ -553,7 +562,7 @@
             this.DgExercise.RowHeadersVisible = false;
             this.DgExercise.RowHeadersWidth = 51;
             this.DgExercise.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgExercise.Size = new System.Drawing.Size(568, 565);
+            this.DgExercise.Size = new System.Drawing.Size(466, 609);
             this.DgExercise.TabIndex = 22;
             // 
             // ExerciseID
@@ -592,9 +601,9 @@
             // 
             this.panel2.Controls.Add(this.BtnDelete);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 574);
+            this.panel2.Location = new System.Drawing.Point(3, 618);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(568, 58);
+            this.panel2.Size = new System.Drawing.Size(466, 63);
             this.panel2.TabIndex = 23;
             // 
             // BtnDelete
@@ -604,27 +613,34 @@
             this.BtnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDelete.Location = new System.Drawing.Point(0, 0);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(568, 58);
+            this.BtnDelete.Size = new System.Drawing.Size(466, 63);
             this.BtnDelete.TabIndex = 0;
             this.BtnDelete.Text = "Eliminar";
             this.BtnDelete.UseVisualStyleBackColor = false;
             // 
-            // BtnClean
+            // Txthoras
             // 
-            this.BtnClean.Dock = System.Windows.Forms.DockStyle.Right;
-            this.BtnClean.Image = ((System.Drawing.Image)(resources.GetObject("BtnClean.Image")));
-            this.BtnClean.Location = new System.Drawing.Point(465, 0);
-            this.BtnClean.Name = "BtnClean";
-            this.BtnClean.Size = new System.Drawing.Size(109, 106);
-            this.BtnClean.TabIndex = 1;
-            this.BtnClean.Text = " ";
-            this.BtnClean.UseVisualStyleBackColor = true;
+            this.Txthoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txthoras.Location = new System.Drawing.Point(566, 79);
+            this.Txthoras.Name = "Txthoras";
+            this.Txthoras.Size = new System.Drawing.Size(92, 31);
+            this.Txthoras.TabIndex = 26;
+            this.Txthoras.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Txtminutos
+            // 
+            this.Txtminutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txtminutos.Location = new System.Drawing.Point(744, 79);
+            this.Txtminutos.Name = "Txtminutos";
+            this.Txtminutos.Size = new System.Drawing.Size(92, 31);
+            this.Txtminutos.TabIndex = 27;
+            this.Txtminutos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FrmRutine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1319, 753);
+            this.ClientSize = new System.Drawing.Size(1440, 811);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmRutine";
@@ -637,7 +653,6 @@
             this.panel5.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtTime)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgExerciseList)).EndInit();
             this.panel6.ResumeLayout(false);
@@ -654,6 +669,8 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgExercise)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Txthoras)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Txtminutos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -666,7 +683,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox CbDifficulty;
-        private System.Windows.Forms.NumericUpDown TxtTime;
         private System.Windows.Forms.TextBox TxtDescription;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -706,5 +722,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Sets;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button BtnDelete;
+        private System.Windows.Forms.NumericUpDown Txtminutos;
+        private System.Windows.Forms.NumericUpDown Txthoras;
     }
 }
